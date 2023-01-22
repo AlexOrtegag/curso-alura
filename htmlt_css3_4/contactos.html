@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF8">
+        <title>Contacto - barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contactos.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>            
+        </header>
+
+        <main>
+            <form><!--se crea un formulario-->
+                <label for="nombreapellido">Nombre y Apellido</label><!--se crea una etiqueta, con for se conecta el input con su label-->
+                <input type="text" id="nombreapellido" class="input-padron" required><!--input para la entrada de datos-->
+
+                <label for="correoelectronico">Correo Electronico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@domain.com">
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(xxx) xxxxxxx">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea><!--se crea una caja de texto-->
+
+                <fieldset>
+                    <legend> Como le gustaria que lo contactaramos?</legend>
+                    
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                                        
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>En cual horario prefiere ser atendido?</legend>
+                    <select><!--se crea un droplist-->
+                        <option>Mañana</option><!--se crea una opcion-->
+                        <option>Tarde</option><!--se crea una opcion-->
+                        <option>Noche</option><!--se crea una opcion-->
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>Le gustaria recibir novedades de la barberia Alura</label>
+
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
+
+            <!--crear una tabla-->
+            <table><!--La etiqueta table, representa la tabla-->
+                <thead><!--La etiqueta thead, representa el encabezado de la tabla-->
+                    <tr><!--La etiqueta tr, representa la fila de la tabla-->
+                        <th>Dia</th><!--La etiqueta th, representa la celda del encabezado de la tabla-->
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+
+                <tbody><!--La etiqueta tbody, representa el cuerpo de la tabla-->
+                    <tr>
+                        <td>Lunes</td><!--La etiqueta td, representa la celda de la tabla-->
+                        <td>08h ~ 20H</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08h ~ 20H</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h ~ 20H</td>  
+                    </tr>
+                </tbody>
+                <!--La etiqueta tfoot, representa el pie de página de la tabla-->
+            </table>
+
+            <!-- forma opcional de crear una tabla-->
+           <!-- <table> se crea una tabla
+                <tr>indicamos una fila
+                    <td>Dia</td>indicamos una columna
+                    <td>Horario</td>  indicamos una columna
+                </tr>
+                <tr>indicamos una fila
+                    <td>Lunes</td>indicamos una columna
+                    <td>08h ~ 20H</td>indicamos una columna
+                </tr>
+                <tr>indicamos una fila
+                    <td>Miercoles</td>indicamos una columna
+                    <td>08h ~ 20H</td>indicamos una columna  
+                </tr>
+                <tr>indicamos una fila
+                    <td>Viernes</td>indicamos una columna
+                    <td>08h ~ 20H</td>indicamos una columna   
+                </tr>
+            </table>-->  
+        </main>
+
+        <footer>
+            <img src="imagenes/logo-blanco.png">
+            <p class="copyright">&copy Copyright Barberia Alura</p>
+
+        </footer>
+    </body>
+</html>

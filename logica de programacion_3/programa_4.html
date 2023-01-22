@@ -1,0 +1,36 @@
+<canvas width="600" height="400"> </canvas> <!--usamos la libreria canvas para crear un lienzo en pantalla defenimos el tamano -->
+
+<script>
+    var pantalla = document.querySelector("canvas");                                      
+    var pincel = pantalla.getContext("2d"); 
+
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0,0,600,400);
+
+  
+    function disenarCircunferencia(x,y, radio){//creamos una funcion para crear un circulo
+        pincel.fillStyle = "blue"; //con la propiedad fill style selecionamos el color
+        pincel.beginPath();//con beginpad decimos al pincel que iniciara un nuevo camino
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);/*usamos la funcion arc para crea el circulo donde indicamos donde esta su centro cual es 
+                                           su radio su angulo inicial y su angulo final*/
+        pincel.fill();//rellenamos el grafico con el color previamente ya definido
+
+    }
+
+    function limpiarpantalla(){
+        pincel.clearRect(0,0,600,400);
+    }
+
+    var x = 0;
+    
+    function actualizarpantalla(){
+        limpiarpantalla();
+        disenarCircunferencia(x,20,10);
+        x++;
+        }
+ 
+        setInterval(actualizarpantalla,100);
+    
+    
+
+</script>

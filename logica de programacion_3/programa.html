@@ -1,0 +1,33 @@
+<canvas width="600" height="400"> </canvas> <!--usamos la libreria canvas para crear un lienzo en pantalla defenimos el tamano -->
+
+<script>
+    var pantalla = document.querySelector("canvas"); //creamos una variable pantalla y usando queryselector para conectar las etiqueta de html 
+                                                     //en este caso la etiqueta canvas con las acciones que se se ejecutaran en la parte de javascript                                                     
+    var pincel = pantalla.getContext("2d"); /*la variable pincel sera encargada de crear las graficas"dibujar" usamos getcontext para extraer todo lo
+                                                que este en pantalla el contenido */
+                                            // y se trbaja en 2 dimenciones 2d ancho y largo
+    pincel.fillStyle = "lightgrey";//con la propiedad fill style selecionamos el color del rectangulo a crear
+    pincel.fillRect(0,0,600,400); //creamos un rectangulo con la funcion fillrect iniciando en x0= 0 y0= 0 xf=600 yf= 400
+
+    pincel.fillStyle = "green";//con la propiedad fill style selecionamos el color del rectangulo a crear
+    pincel.fillRect(0,0,200,400); //creamos un rectangulo con la funcion fillrect iniciando en x0= 0 y0= 0 xf=600 yf= 400
+
+    pincel.fillStyle = "red";//con la propiedad fill style selecionamos el color del rectangulo a crear
+    pincel.fillRect(400,0,200,400); //creamos un rectangulo con la funcion fillrect iniciando en x0= 0 y0= 0 xf=600 yf= 400
+
+    pincel.fillStyle = "yellow"; //con la propiedad fill style selecionamos el color
+    pincel.beginPath();//con beginpad decimos al pincel que iniciara un nuevo camino
+    pincel.moveTo(300,200);//indicamos a donde se movera como inicio
+    pincel.lineTo(200,400);//indicamos que dibujara una linea del punto anterior a punto indicado
+    pincel.lineTo(400,400);//indicamos que dibujara una linea del punto anterior a punto indicado 
+    pincel.fill();//rellenamos el grafico con el color previamente ya definido
+
+    pincel.fillStyle = "blue"; //con la propiedad fill style selecionamos el color
+    pincel.beginPath();//con beginpad decimos al pincel que iniciara un nuevo camino
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);/*usamos la funcion arc para crea el circulo donde indicamos donde esta su centro cual es 
+                                           su radio su angulo inicial y su angulo final*/
+    pincel.fill();//rellenamos el grafico con el color previamente ya definido
+
+
+        //podemos buscar mas info como 2d canva 
+</script>

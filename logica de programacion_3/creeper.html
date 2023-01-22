@@ -1,0 +1,20 @@
+<canvas width="600" height="400"> </canvas> <!--usamos la libreria canvas para crear un lienzo en pantalla defenimos el tamano -->
+
+<script>
+    var pantalla = document.querySelector("canvas"); //creamos una variable pantalla y usando queryselector para conectar las etiqueta de html 
+                                                     //en este caso la etiqueta canvas con las acciones que se se ejecutaran en la parte de javascript                                                     
+    var pincel = pantalla.getContext("2d"); //la variable pincel sera encargada de crear las graficas"dibujar" usamos getcontext para extraer todo lo que este en pantalla el contenido 
+                                            // y se trbaja en 2 dimenciones 2d ancho y largo
+   
+
+    pincel.fillStyle = "darkgreen";//con la propiedad fill style selecionamos el color del rectangulo a crear
+    pincel.fillRect(200,50,350,300); //creamos un rectangulo con la funcion fillrect iniciando en x0= 0 y0= 0 xf=600 yf= 400
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(250,110,90,90); 
+    pincel.fillRect(410,110,90,90); 
+    pincel.fillRect(340,200,70,100); 
+    pincel.fillRect(300,240,40,110); 
+    pincel.fillRect(410,240,40,110); 
+
+</script>

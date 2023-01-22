@@ -1,0 +1,32 @@
+<canvas width="600" height="400"> </canvas> <!--usamos la libreria canvas para crear un lienzo en pantalla defenimos el tamano -->
+
+<script>
+    var pantalla = document.querySelector("canvas");                                      
+    var pincel = pantalla.getContext("2d"); 
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+    function exibir_alerta(evento){//creamos una funcion para crear una alerta en la pantalla de usuario
+        var x = evento.pageX - pantalla.offsetLeft;/*extraemos de evento la informacion del eje x y le restamos un offset para que el 0 este
+                                                    en la esquina superior izquierda*/
+        var y = evento.pageY - pantalla.offsetLeft;/*extraemos de evento la informacion del eje y y le restamos un offset para que el 0 este
+                                                    en la esquina superior izquierda*/
+        console.log(evento);
+        alert("usted hizo click en " + x +"y" + y);//usamos el metodo alert para crear el mensaje que se mostrara
+    }
+
+    function dibujar_circulo(evento){//creamos una funcion para crear un circulo
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetLeft;
+        pincel.fillStyle = "blue"; //con la propiedad fill style selecionamos el color
+        pincel.beginPath();//con beginpad decimos al pincel que iniciara un nuevo camino
+        pincel.arc(x, y, 15, 0, 2 * 3.14);/*usamos la funcion arc para crea el circulo donde indicamos donde esta su centro cual es 
+                                           su radio su angulo inicial y su angulo final*/
+        pincel.fill();//rellenamos el grafico con el color previamente ya definido
+        console.log("usted dibujo en " + x +" y " + y);
+    }
+    //pantalla.onclick = exibir_alerta;
+    pantalla.onclick = dibujar_circulo;
+
+</script>
